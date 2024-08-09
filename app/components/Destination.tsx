@@ -48,22 +48,20 @@ export default function Destination({
         </div>
         <div
           className={clsx(
-            "text-brand-gray line-clamp-2 font-bold lg:min-h-[3rem]",
+            "font-unbounded text-brand-gray line-clamp-2 font-bold lg:min-h-[3rem]",
             !isVertical && "text-base lg:text-4xl"
           )}
         >
           {name}
         </div>
-        <div className="flex flex-col-reverse lg:flex-col gap-2">
+        <div className="flex flex-col-reverse lg:flex-col gap-2 flex-grow">
           <div className="font-bold">Organizer by {partner}</div>
-          <p className={clsx("flex-grow", isVertical && "hidden")}>
-            {description}
-          </p>
+          <p className={clsx(isVertical && "hidden")}>{description}</p>
         </div>
 
         <div
           className={clsx(
-            "flex justify-between items-center",
+            "flex justify-between items-center lg:items-start",
             isVertical && "flex-col justify-normal w-fit gap-4"
           )}
         >
@@ -74,13 +72,15 @@ export default function Destination({
               Start from
             </div>
             {Number(discount) ? (
-              <div className="line-through text-brand-zink">IDR {discount}</div>
+              <div className="font-unbounded line-through text-brand-zink">
+                IDR {discount}
+              </div>
             ) : (
               ""
             )}
             <div
               className={clsx(
-                "text-brand-gray font-medium",
+                "font-unbounded text-brand-gray font-medium",
                 !isVertical && "text-xl lg:text-3xl"
               )}
             >

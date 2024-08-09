@@ -18,11 +18,17 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        thesignature: ["var(--font-thesignature)"],
+        unbounded: ["var(--font-unbounded)"],
+        albertsans: ["var(--font-albertsans)"],
+      },
       colors: {
         "brand-white": "#FAF9F5",
         "brand-gray": "#0B7373",
         "brand-black": "#004040",
         "brand-zink": "#B8B8B8",
+        "brand-green": "#43ff64d9",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

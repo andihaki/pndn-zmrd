@@ -21,7 +21,9 @@ export default function LuxuryFootage() {
   return (
     <section className="bg-[#D6B66B] w-full py-8 lg:py-20">
       <div className="mx-auto max-w-5xl px-4">
-        <div className="text-6xl lg:text-7xl mb-6">Luxury Footages</div>
+        <div className="font-thesignature text-6xl lg:text-7xl mb-6">
+          Luxury Footages
+        </div>
         {/* @todo: carousel image on hover */}
         <ul className="hidden lg:flex my-6 gap-6">
           {iteneraries.map((itinerary) => (

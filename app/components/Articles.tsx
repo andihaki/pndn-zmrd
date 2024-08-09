@@ -18,7 +18,7 @@ export default function Articles() {
   const articles: any[] = data?.data || [];
   return (
     <section id="article" className="mx-auto max-w-5xl px-4">
-      <div className="text-xl lg:text-4xl text-brand-gray font-bold">
+      <div className="font-unbounded text-xl lg:text-4xl text-brand-gray font-bold">
         Articles
       </div>
       <div className="text-base lg:text-2xl text-brand-gray">
@@ -38,7 +38,7 @@ export default function Articles() {
               <img
                 src={article.featured_image}
                 alt={article.title}
-                className="h-full"
+                className="h-full grayscale hover:grayscale-0 transition-all"
               />
             </div>
             <div className="bg-brand-gray text-brand-white font-bold px-4 py-6">

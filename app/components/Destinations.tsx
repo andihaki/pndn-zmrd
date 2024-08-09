@@ -21,9 +21,11 @@ export default function Destinations() {
   return (
     <section id="destination" className="mx-auto max-w-5xl px-4 py-12 lg:py-20">
       <div className="flex flex-col lg:flex-row items-start lg:items-center w-full gap-4 lg:gap-6">
-        <div className="text-4xl text-brand-black">Destinations</div>
-        <Button variant="ghost" className="px-0 gap-2">
-          <CircleChevronRight />
+        <div className="font-unbounded text-4xl text-brand-black">
+          Destinations
+        </div>
+        <Button variant="link" className="px-0 gap-2">
+          <CircleChevronRight size={44} strokeWidth={1} />
           Explore more
         </Button>
       </div>
@@ -60,10 +62,10 @@ export default function Destinations() {
 
       <div className="w-full flex justify-center lg:justify-end">
         <Button
-          variant="ghost"
+          variant="link"
           className="flex gap-4 text-brand-black font-bold mt-6"
         >
-          <CircleChevronRight />
+          <CircleChevronRight size={44} strokeWidth={1} />
           Explore more
         </Button>
       </div>

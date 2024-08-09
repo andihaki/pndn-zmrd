@@ -12,14 +12,17 @@ export default function CustomizeYourTrip() {
         <Image src={imgCustomizeYourTrip} width={329} height={302} alt="" />
       </div>
       <div className="flex-grow flex flex-col gap-4 text-center lg:text-left items-center lg:items-start">
-        <div className="text-brand-black text-3xl">
+        <div className="font-unbounded text-brand-black text-3xl">
           Discover Tailored Experiences
         </div>
         <div className="pr-0 lg:pr-36">
           Create your own journey, personalized to suit your preferences and
           interests, ensuring a once-in-a-lifetime adventure awaits.
         </div>
-        <Button variant="default" className="w-full lg:w-fit">
+        <Button
+          variant="default"
+          className="w-full lg:w-fit hover:bg-brand-green"
+        >
           Customize Your Trip
         </Button>
       </div>
