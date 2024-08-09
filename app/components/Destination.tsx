@@ -26,12 +26,12 @@ export default function Destination({
   return (
     <li
       className={clsx(
-        "flex flex-col lg:flex-row gap-x-6 py-6 lg:py-16 even:flex-row-reverse",
+        "flex flex-col lg:flex-row gap-y-4 lg:gap-y-6 gap-x-6 py-6 lg:py-16 even:flex-col lg:even:flex-row-reverse",
         isVertical &&
-          "flex-col even:flex-col odd:flex-col basis-1/2 lg:basis-1/3 shrink-0 lg:shrink"
+          "flex-col lg:even:flex-col lg:odd:flex-col basis-1/2 lg:basis-1/3 shrink-0 lg:shrink"
       )}
     >
-      <div className="basis-1/2 aspect-video">
+      <div className="basis-1 lg:basis-1/2 aspect-video">
         <img
           src={galleries[0].src}
           alt={galleries[0].title}
@@ -48,7 +48,7 @@ export default function Destination({
         </div>
         <div
           className={clsx(
-            "text-brand-gray line-clamp-2 font-bold",
+            "text-brand-gray line-clamp-2 font-bold lg:min-h-[3rem]",
             !isVertical && "text-base lg:text-4xl"
           )}
         >
@@ -91,7 +91,9 @@ export default function Destination({
               }).format(price)}
             </div>
           </div>
-          <Button className="text-brand-black">See Details</Button>
+          <Button className="text-brand-black border-brand-gray">
+            See Details
+          </Button>
         </div>
       </div>
     </li>

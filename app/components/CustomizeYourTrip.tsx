@@ -6,7 +6,7 @@ export default function CustomizeYourTrip() {
   return (
     <section
       id="customize-your-trip"
-      className="mx-auto max-w-5xl px-4 flex flex-col lg:flex-row gap-6 items-center my-12 lg:my-20"
+      className="mx-auto max-w-5xl px-4 flex flex-col lg:flex-row gap-6 items-center py-12 lg:py-20"
     >
       <div className="">
         <Image src={imgCustomizeYourTrip} width={329} height={302} alt="" />
@@ -19,7 +19,9 @@ export default function CustomizeYourTrip() {
           Create your own journey, personalized to suit your preferences and
           interests, ensuring a once-in-a-lifetime adventure awaits.
         </div>
-        <Button variant="default">Customize Your Trip</Button>
+        <Button variant="default" className="w-full lg:w-fit">
+          Customize Your Trip
+        </Button>
       </div>
     </section>
   );
