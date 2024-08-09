@@ -3,7 +3,7 @@
 import clsx from "clsx";
 
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import useHash from "../hooks/useHash";
 
 export const MENUS = [
   {
@@ -30,7 +30,7 @@ type Props = {
 };
 
 export default function HeaderMenu({ isMobile, isScrolled }: Props) {
-  const [hash, setHash] = useState(() => window.location.hash || "#");
+  const [hash, setHash] = useHash();
   return (
     <>
       <ul className="flex flex-col lg:flex-row gap-2">

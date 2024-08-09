@@ -3,14 +3,15 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Menu } from "lucide-react";
+import clsx from "clsx";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import HeaderMenu, { MENUS } from "./HeaderMenu";
-import clsx from "clsx";
 import { Button } from "@/components/ui/button";
+import HeaderMenu, { MENUS } from "./HeaderMenu";
+import useHash from "../hooks/useHash";
 
 export default function Header() {
-  const [hash, setHash] = useState(() => window.location.hash || "#");
+  const [hash, setHash] = useHash();
   const [isScrolled, setIsScrolled] = useState(false);
   const handleScroll = () => {
     if (window.scrollY > 160 && !isScrolled) {
