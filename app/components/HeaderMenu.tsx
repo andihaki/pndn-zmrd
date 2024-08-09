@@ -1,7 +1,13 @@
-import { Button } from "@/components/ui/button";
 import clsx from "clsx";
 
-export default function HeaderMenu({ isMobile }: { isMobile?: boolean }) {
+import { Button } from "@/components/ui/button";
+
+type Props = {
+  isMobile?: boolean;
+  isScrolled?: boolean;
+};
+
+export default function HeaderMenu({ isMobile, isScrolled }: Props) {
   return (
     <>
       {/* @todo: create constant list of header */}
@@ -19,7 +25,12 @@ export default function HeaderMenu({ isMobile }: { isMobile?: boolean }) {
       <a href="#article">
         <div className="px-6 py-4">Article</div>
       </a>
-      <Button className={clsx("px-6 py-4", isMobile && "text-brand-black")}>
+      <Button
+        className={clsx(
+          "px-6 py-4",
+          (isMobile || isScrolled) && "text-brand-gray"
+        )}
+      >
         Need Assistance?
       </Button>
     </>
