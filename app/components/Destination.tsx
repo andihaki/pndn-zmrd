@@ -1,6 +1,7 @@
 import clsx from "clsx";
 
 import { Button } from "@/components/ui/button";
+import useImageInterval from "../hooks/useImageInterval";
 
 type Props = {
   galleries: Array<{ src: string; title: string }>;
@@ -23,6 +24,8 @@ export default function Destination({
   price,
   isVertical,
 }: Props) {
+  const [count] = useImageInterval({ length: galleries.length });
+
   return (
     <li
       className={clsx(
@@ -32,10 +35,11 @@ export default function Destination({
       )}
     >
       <div className="basis-1 lg:basis-1/2 aspect-video">
+        {/* @todo: render all image, use keyframes to animate it */}
         <img
-          src={galleries[0].src}
-          alt={galleries[0].title}
-          className="w-full aspect-square"
+          src={galleries[count].src}
+          alt={galleries[count].title}
+          className="w-full aspect-square object-cover ease-in-out transition-all"
         />
       </div>
       <div

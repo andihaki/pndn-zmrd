@@ -38,7 +38,7 @@ export default function Articles() {
               <img
                 src={article.featured_image}
                 alt={article.title}
-                className="h-full grayscale hover:grayscale-0 transition-all"
+                className="h-full grayscale-0 lg:grayscale hover:grayscale-0 transition-all"
               />
             </div>
             <div className="bg-brand-gray text-brand-white font-bold px-4 py-6">
