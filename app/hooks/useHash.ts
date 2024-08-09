@@ -7,5 +7,5 @@ export default function useHash() {
     setHash(window.location.hash || "#");
   }, []);
 
-  return [hash, setHash];
+  return [hash, setHash] as const;
 }
